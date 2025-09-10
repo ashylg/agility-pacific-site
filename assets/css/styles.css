@@ -1,0 +1,96 @@
+﻿
+:root{
+  --brand-yellow:#fff176;
+  --brand-orange:#ffb74d;
+  --brand-deep:#ff6f00;
+  --ink:#0a0a0a;
+  --bg:#ffffff;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,'Helvetica Neue',Arial,'Noto Sans',sans-serif;color:var(--ink);background:var(--bg);}
+a{color:var(--brand-deep);text-decoration:none}
+a:hover{text-decoration:underline}
+.container{max-width:1100px;margin:0 auto;padding:0 20px}
+.header{position:sticky;top:0;background:#fff;border-bottom:1px solid #eee;z-index:20}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.brand{display:flex;gap:12px;align-items:center}
+.brand img{height:36px;width:auto}
+.brand h1{font-size:18px;margin:0;letter-spacing:.5px}
+.menu{display:flex;gap:20px;align-items:center}
+.menu a{padding:8px 10px;border-radius:8px}
+.menu a.active, .menu a:hover{background:var(--brand-yellow)}
+.hero{background:linear-gradient(135deg,var(--brand-yellow),var(--brand-orange));padding:80px 0}
+.hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center}
+.hero h2{font-size:40px;margin:0 0 12px 0}
+.hero p{font-size:18px;margin:0 0 20px 0}
+.cta{display:inline-block;background:var(--ink);color:#fff;padding:12px 18px;border-radius:10px}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(3,1fr)}
+.card{border:1px solid #eee;border-radius:16px;padding:18px;background:#fff;box-shadow:0 1px 0 rgba(0,0,0,.02)}
+.card h3{margin:0 0 8px 0}
+.badge{display:inline-block;background:var(--brand-yellow);border:1px solid #eedc82;padding:4px 8px;border-radius:999px;font-size:12px;margin-right:6px}
+.section{padding:64px 0}
+.section h2{margin-top:0;font-size:28px}
+.footer{background:#0b0b0b;color:#f2f2f2}
+.footer a{color:#fff}
+.footer .grid{grid-template-columns:2fr 1fr 1fr}
+.note{font-size:14px;color:#444}
+.hero-logo{
+  filter:drop-shadow(0px 6px 18px rgba(0,0,0,.12));
+  border-radius:20px;
+  background:#fff;           /* white card */
+  border:1px solid #eee;     /* subtle outline so it stands off the gradient */
+  padding:16px;              /* a bit more breathing room */
+  display:inline-block;
+}
+.values{display:grid;gap:16px;grid-template-columns:repeat(3,1fr)}
+.values .card{background:linear-gradient(180deg,#fff, #fffbe6)}
+.team{display:grid;gap:18px;grid-template-columns:repeat(3,1fr)}
+.team .card{display:flex;gap:16px;align-items:flex-start}
+.team img{width:140px;height:140px;object-fit:cover;border-radius:16px;border:1px solid #eee}
+.kicker{font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:#333;margin-bottom:8px}
+/* Contact bar — white card */
+.cta-bar{
+  background:#ffffff;
+  color:#111111;
+  padding:20px;
+  border-radius:14px;
+  border:1px solid #eee;
+  box-shadow:0 6px 18px rgba(0,0,0,.06);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:16px;
+  flex-wrap:wrap;
+}
+
+/* Normal links inside contact */
+.cta-bar a{
+  color:#111111;
+  text-decoration:underline;
+}
+.cta-bar a:hover{ text-decoration:none; }
+
+/* Right-side CTA button */
+.cta-bar .cta-btn{
+  background:#111111;
+  color:#ffffff;
+  padding:10px 14px;
+  border-radius:10px;
+  text-decoration:none;
+  white-space:nowrap;
+}
+.cta-bar .cta-btn:hover{ opacity:.9; }
+
+.mobile{display:none}
+@media (max-width: 860px){
+  .grid{grid-template-columns:1fr}
+  .values{grid-template-columns:1fr}
+  .team{grid-template-columns:1fr}
+  .hero .wrap{grid-template-columns:1fr}
+  .menu{display:none}
+  .mobile{display:block}
+}
+
+
+
